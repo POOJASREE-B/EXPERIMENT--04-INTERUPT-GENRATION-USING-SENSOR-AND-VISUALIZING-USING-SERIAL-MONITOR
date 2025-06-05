@@ -1,8 +1,8 @@
-###  DATE: 
+###  DATE:
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: Poojasree B
+###  ROLL NO : 212223040148
+###  DEPARTMENT: CSE 
 
 
 # EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR
@@ -30,7 +30,8 @@ An IR sensor has two small LED indicators – one for power, which is ON the ent
 ON (Active) when it detects an object
 OFF (Inactive) when it doesn’t detect any object
 
-![image](https://github.com/vasanthkumarch/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/36288975/9bf61298-1deb-48d7-b88f-bd08e3cc6a83)
+![image](https://github.com/AmruthaRajsheker/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119475943/039ded8c-60db-400a-a563-3888686c3de6)
+
 Now that we have a little idea about its works, let’s take a look at how to interface it with evive and see it in action.
 
 Connect VCC pin to the +5V pin on evive.
@@ -44,7 +45,8 @@ Interrupts are asynchronous (i.e. can happen anytime) events that disrupt the no
 
 With interrupt, we do not need to continuously check the state of the digital input pin. When an interrupt occurs (a change is detected), the processor stops the execution of the main program and a function is called upon known as ISR or the Interrupt Service Routine. The processor then temporarily works on a different task (ISR) and then gets back to the main program after the handling routine has ended.
 
-![image](https://github.com/vasanthkumarch/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/36288975/cb4ac7aa-30ed-4b97-b3b4-1986db9f1558)
+![image](https://github.com/AmruthaRajsheker/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119475943/cdd4b91c-0915-4f86-8ba8-796484c11e69)
+
 The STM32 ARM microcontroller interrupts are generated in the following manner:
 
 The system runs the ISR and then goes back to the main program. The NVIC and EXTI are configured. The Interrupt Service Routine (ISR) also known as the interrupt service routine handler is defined to enable the external interrupts.
@@ -52,19 +54,25 @@ The system runs the ISR and then goes back to the main program. The NVIC and EXT
  
 Interrupt Lines (EXTI0-EXTI15)
 The STM32 ARM microcontroller features 23 event sources which are divided into two sections. The first section corresponds t external pins on each port which are P0-P15. The second section corresponds to RTC, ethernet, USB interrupts. Therefore, in the first section, we have 16 lines corresponding to line0 till line15. All of these map to a pin number.
+
 ![image](https://github.com/vasanthkumarch/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/36288975/1110746f-6be2-4d12-9a34-66004e4b307b)
 
 
 The diagram below shows how the GPIO pins are connected to the 16 interrupt lines:
+
+<br/>
+<br/>
+<br/>
+
 ## Procedure:
- 1. click on STM 32 CUBE IDE, the following screen will appear 
+1. click on STM 32 CUBE IDE, the following screen will appear 
  ![image](https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png)
 
- 2. click on FILE, click on new stm 32 project 
- ![image](https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png)
+2. click on FILE, click on new stm 32 project 
+![image](https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png)
 ![image](https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png)
-3. select the target to be programmed  as shown below and click on next 
 
+3. select the target to be programmed  as shown below and click on next 
 ![image](https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png)
 
 4.select the program name 
@@ -82,11 +90,13 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
 7.click on cntrl+S , automaticall C program will be generated 
 ![image](https://user-images.githubusercontent.com/36288975/226189443-8b43451d-0b14-47e4-a20b-cc09c6ad8458.png)
 ![image](https://user-images.githubusercontent.com/36288975/226189450-85ffa969-2ffb-4788-81e5-72d60fdda0f1.png)
+
 8. edit the program and as per required 
 ![image](https://user-images.githubusercontent.com/36288975/226189461-a573e62f-a109-4631-a250-a20925758fe0.png)
 
 9. use project and build all 
 ![image](https://user-images.githubusercontent.com/36288975/226189554-3f7101ac-3f41-48fc-abc7-480bd6218dec.png)
+
 10. once the project is bulild 
 ![image](https://user-images.githubusercontent.com/36288975/226189577-c61cc1eb-3990-4968-8aa6-aefffc766b70.png)
 
@@ -105,13 +115,13 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
 ![image](https://user-images.githubusercontent.com/36288975/227599531-f03d277e-440f-4f8a-8875-97f8e8058c71.png)
 
 16. flash the bin or hex file as shown below by switching the switch to flash mode 
-
 ![image](https://user-images.githubusercontent.com/36288975/227599656-dc4a635f-b5f1-44c8-84c5-ee0a592fa184.png)
 
-
 17. check for execution of the output by switching the board to run mode 
+
 18. click on the serial port utility 
 ![image](https://github.com/vasanthkumarch/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/36288975/cd2c17fc-afac-4d72-97f9-20db3e63f23f)
+
 19. click on the run to observe the values 
 
 
@@ -119,14 +129,62 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
 
 ## STM 32 CUBE PROGRAM :
 
+```
+#include "main.h"
+#include "stdio.h"
 
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_USART2_UART_Init(void);
+
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  MX_USART2_UART_Init();
+
+  while (1)
+  {
+  }
+}
+```
+```
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4) == 1)
+  {
+    printf("Interrupt generated by Amrutha \n");
+  }
+  else
+  {
+  }
+}
+
+PUTCHAR_PROTOTYPE
+{
+  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0XFFF);
+  return ch;
+}
+
+```
 
 ## Output screen shots of serial port utility   :
- 
- 
- ## Circuit board :
- 
- 
+ ![exp4](https://github.com/AmruthaRajsheker/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119475943/873a851e-6596-4ea4-8cfb-aed64467a98d)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/> 
+<br/>
+<br/> 
+
+## Circuit board :
+![image](https://github.com/AmruthaRajsheker/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119475943/422c8aa4-669f-4a3f-ab94-c7930bccd717)
+
  
 ## Result :
 Interfacing a  IR SENSOR and interrupt is generated using external interrupt mode , visualized on serial port 
